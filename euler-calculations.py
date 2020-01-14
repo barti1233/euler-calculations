@@ -4,4 +4,11 @@ def factorial(value):
         result=a*result
     return result
 
-print(factorial(5))
+def euler_from_series(precission):
+    result=0
+    tmp=1
+    while result<precission:
+        result=1/factorial(tmp)
+        tmp=tmp+1
+    return result
+print(euler_from_series(1/100000))
